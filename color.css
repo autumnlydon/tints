@@ -1,0 +1,307 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.palette {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.color-spot {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.color-spot.background {
+    width: 100%;
+    height: 100%;
+    background-color: #F3CFC6;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.color-spot.top-left,
+.color-spot.top-right,
+.color-spot.bottom-left,
+.color-spot.bottom-right {
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+}
+
+.color-spot.top-left {
+    background-color: #D18C96;
+    transform: translate(-50%, -50%) translate(-7px, -7px);
+}
+
+.color-spot.top-right {
+    background-color: #CD5C5C;
+    transform: translate(-50%, -50%) translate(7px, -7px);
+}
+
+.color-spot.bottom-left {
+    background-color: #B8860B;
+    transform: translate(-50%, -50%) translate(-7px, 7px);
+}
+
+.color-spot.bottom-right {
+    background-color: #8B4513;
+    transform: translate(-50%, -50%) translate(7px, 7px);
+}
+
+.app-name {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    background: linear-gradient(45deg, var(--text-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+:root {
+    --millennial-pink: #F3CFC6;
+    --light-beige: #F5E6D3;
+    --lighter-beige: #FFF5F5;
+    --mauve: #9F5F80;
+    --text-color: #9F5F80;
+    --accent-color: #D18C96;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--lighter-beige);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 40px;
+}
+
+section {
+    margin-bottom: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin: 40px auto 0;
+}
+h1, h2, h3, p{
+    text-align: center;
+    text-transform: lowercase;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #5D4E60;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 3px solid var(--accent-color);
+    border-right: 3px solid var(--accent-color);
+    letter-spacing: 0.5px;
+}
+
+p + p {
+    margin-top: 1em;
+}
+
+/* Add some space between h2 and the following paragraph */
+h2 + p {
+    margin-top: 10px;
+}
+
+.highlight {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.season {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.season:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.season h3 {
+    margin-top: 0;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.subtype {
+    margin-bottom: 15px;
+}
+
+.subtype h4 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.color-dots {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.color-dots span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: block;
+    margin: 30px auto;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #C17A84;
+}
+
+footer {
+    background-color: var(--mauve);
+    color: var(--lighter-beige);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .season-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .season-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.spring .subtype:nth-of-type(1) .color-dots span:nth-child(1) { background-color: #FFB3BA; }
+.spring .subtype:nth-of-type(1) .color-dots span:nth-child(2) { background-color: #BAFFC9; }
+.spring .subtype:nth-of-type(1) .color-dots span:nth-child(3) { background-color: #FFE4B5; }
+
+.spring .subtype:nth-of-type(2) .color-dots span:nth-child(1) { background-color: #FF9933; }
+.spring .subtype:nth-of-type(2) .color-dots span:nth-child(2) { background-color: #66CC66; }
+.spring .subtype:nth-of-type(2) .color-dots span:nth-child(3) { background-color: #FFCC33; }
+
+.spring .subtype:nth-of-type(3) .color-dots span:nth-child(1) { background-color: #FF6666; }
+.spring .subtype:nth-of-type(3) .color-dots span:nth-child(2) { background-color: #33CC99; }
+.spring .subtype:nth-of-type(3) .color-dots span:nth-child(3) { background-color: #FFFF66; }
+
+.summer .subtype:nth-of-type(1) .color-dots span:nth-child(1) { background-color: #FFB6C1; }
+.summer .subtype:nth-of-type(1) .color-dots span:nth-child(2) { background-color: #98FB98; }
+.summer .subtype:nth-of-type(1) .color-dots span:nth-child(3) { background-color: #B0E0E6; }
+
+.summer .subtype:nth-of-type(2) .color-dots span:nth-child(1) { background-color: #DDA0DD; }
+.summer .subtype:nth-of-type(2) .color-dots span:nth-child(2) { background-color: #8FBC8F; }
+.summer .subtype:nth-of-type(2) .color-dots span:nth-child(3) { background-color: #B0C4DE; }
+
+.summer .subtype:nth-of-type(3) .color-dots span:nth-child(1) { background-color: #DB7093; }
+.summer .subtype:nth-of-type(3) .color-dots span:nth-child(2) { background-color: #20B2AA; }
+.summer .subtype:nth-of-type(3) .color-dots span:nth-child(3) { background-color: #87CEFA; }
+
+.autumn .subtype:nth-of-type(1) .color-dots span:nth-child(1) { background-color: #D2B48C; }
+.autumn .subtype:nth-of-type(1) .color-dots span:nth-child(2) { background-color: #8B8970; }
+.autumn .subtype:nth-of-type(1) .color-dots span:nth-child(3) { background-color: #CD853F; }
+
+.autumn .subtype:nth-of-type(2) .color-dots span:nth-child(1) { background-color: #D2691E; }
+.autumn .subtype:nth-of-type(2) .color-dots span:nth-child(2) { background-color: #556B2F; }
+.autumn .subtype:nth-of-type(2) .color-dots span:nth-child(3) { background-color: #B8860B; }
+
+.autumn .subtype:nth-of-type(3) .color-dots span:nth-child(1) { background-color: #8B4513; }
+.autumn .subtype:nth-of-type(3) .color-dots span:nth-child(2) { background-color: #2F4F4F; }
+.autumn .subtype:nth-of-type(3) .color-dots span:nth-child(3) { background-color: #A0522D; }
+
+.winter .subtype:nth-of-type(1) .color-dots span:nth-child(1) { background-color: #FF0000; }
+.winter .subtype:nth-of-type(1) .color-dots span:nth-child(2) { background-color: #0000FF; }
+.winter .subtype:nth-of-type(1) .color-dots span:nth-child(3) { background-color: #FFFF00; }
+
+.winter .subtype:nth-of-type(2) .color-dots span:nth-child(1) { background-color: #8B008B; }
+.winter .subtype:nth-of-type(2) .color-dots span:nth-child(2) { background-color: #4682B4; }
+.winter .subtype:nth-of-type(2) .color-dots span:nth-child(3) { background-color: #2F4F4F; }
+
+.winter .subtype:nth-of-type(3) .color-dots span:nth-child(1) { background-color: #800000; }
+.winter .subtype:nth-of-type(3) .color-dots span:nth-child(2) { background-color: #191970; }
+.winter .subtype:nth-of-type(3) .color-dots span:nth-child(3) { background-color: #006400; }
